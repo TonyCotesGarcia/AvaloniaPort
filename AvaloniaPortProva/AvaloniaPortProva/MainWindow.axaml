@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaPortProva.MainWindow"
+        Title="AvaloniaPortProva"
+		WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Label x:Name="MainWindow_lbl_TextoPrueva" Content="Texto Prueva" HorizontalAlignment="Left" Margin="34,43,0,0" VerticalAlignment="Top"/>
+		<Button x:Name="MainWindow_btn_BotonPrueva" Content="Boton Prueva" HorizontalAlignment="Left" Height="53" Margin="179,114,0,0" VerticalAlignment="Top" Width="121" Click="onClickBtn"/>
+		<TextBox x:Name="MainWindow_txtBox_TxtBoxPrueva" HorizontalAlignment="Left" Margin="40,114,0,0" TextWrapping="Wrap" Text="TextBox Prueva" VerticalAlignment="Top" Width="120"/>
+		<TextBlock x:Name="MainWindow_txtBlock_TxtBlockPrueva" HorizontalAlignment="Left" Margin="40,170,0,0" TextWrapping="Wrap" Text="TextBlock Prueva" VerticalAlignment="Top"/>
+		<CheckBox x:Name="MainWindow_chckBox_MajusMin" Content="Majus/Min" HorizontalAlignment="Left" Margin="40,74,0,0" VerticalAlignment="Top" Click="onClick"/>
+		<Button x:Name="MainWindow_btn_wndAnntClckEvent" Content="Anar A TeeChart" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="onClick_wndAnntClckEvent"/>
+		<Button x:Name="MainWindow_btn_wndRealTime" Content="Realtime Dash" HorizontalAlignment="Right" Margin="0,0,10,50" VerticalAlignment="Bottom" Click="onClick_wndRealtimeDash"/>
+
+	</Grid>
+</Window>
