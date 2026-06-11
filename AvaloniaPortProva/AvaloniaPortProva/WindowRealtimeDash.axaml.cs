@@ -39,8 +39,7 @@ public partial class WindowRealtimeDash : Window
         {
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dt_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 5);
-        }
+dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 5);        }
 
         return dispatcherTimer;
     }
@@ -14736,7 +14735,7 @@ public partial class WindowRealtimeDash : Window
         line2.Add(timeStamp, newLine2Val);
 
         if (area1.Count == 102)
-            OneYesOneNo = 0; //init
+            OneYesOneNo = 0;
 
         OneYesOneNo++;
 
@@ -14785,8 +14784,6 @@ public partial class WindowRealtimeDash : Window
     {
         double a;
 
-        //m = 40;  //0 -> 500
-        //square if ( (function_type.itemindex=0) )
         {
             for (int n = 0; n < N1; n++)
             {
@@ -14799,20 +14796,6 @@ public partial class WindowRealtimeDash : Window
                 }
             }
         }
-        /* sawtooth else
-        {
-          for (n=0 to N1-1 do
-          {
-            x[n]=0;
-            s=-1;
-            for (k=1 to m do
-            {
-              s=-s;
-              a=s/k;
-              x[n]=x[n]+(2/pi)*a*sin(p2*3*k*n/N1);
-            }
-          }
-        }*/
         tChart8[0].Clear();
         for (int n = 0; n < N1; n++)
             tChart8[0].Add(n, x[n]);
@@ -14862,20 +14845,9 @@ public partial class WindowRealtimeDash : Window
 
         tChart5.Panel.Color = System.Drawing.Color.FromArgb(70, 70, 70);
         tChart5.Axes.Left.Increment = 0.2;
-        //teeOpenGL1.SetChart(tChart5.Chart); //pending
-        //teeOpenGL1.Active = true;
-
-        /*
-         *  Arrays of X and Z values with sample points...
-         * The values have floating point decimals and define
-         * an irregular grid
-        */
         double[] xval = new double[10] { 0.1, 0.2, 0.3, 0.5, 0.8, 1.1, 1.5, 2.0, 2.2, 3.0 };
         double[] zval = new double[10] { 0.5, 0.6, 0.7, 0.75, 0.8, 1.1, 1.5, 2.0, 2.2, 5.6 };
-        surface.IrregularGrid = true; // <---------- VERY IMPORTANT !!!
-
-        // Now add all "Y" points...
-        // An irregular grid of 10 x 10 cells
+        surface.IrregularGrid = true;
         surface.NumXValues = 10;
         surface.NumZValues = 10;
 
@@ -14884,7 +14856,6 @@ public partial class WindowRealtimeDash : Window
         for (int x = 0; x < 9; x++) // = 10 rows
             for (int z = 0; z < 09; z++) // = 10 columns
             {
-                //y = (Math.Sin(z * Math.PI / 10.0) * Math.Cos(x * Math.PI / 5.0) + 1) * 700 ;  // example Y value
                 y = 700 + Math.Sin(z * Math.PI / 10.0) * Math.Cos(x * Math.PI / 5.0);  // example Y value
                 surface.Add(xval[x], y, zval[z]);
             }

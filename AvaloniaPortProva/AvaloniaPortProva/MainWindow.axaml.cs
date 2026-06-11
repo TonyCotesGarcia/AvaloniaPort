@@ -46,5 +46,13 @@ namespace AvaloniaPortProva
             this.Hide();
         }
 
+        private void onClick_wndAvaloniaLliure(object sender, RoutedEventArgs e)
+        {
+            AvaloniaLliure windowAvaloniaLliure = new AvaloniaLliure();
+            windowAvaloniaLliure.Show();
+
+            this.Hide();
+        }
+
     }
 }

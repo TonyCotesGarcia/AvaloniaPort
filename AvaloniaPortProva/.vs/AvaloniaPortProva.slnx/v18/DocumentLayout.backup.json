@@ -1,29 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\",
+  "WorkspaceRootPath": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaportprova\\avaloniaportprova\\windowrealtimedash.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\windowrealtimedash.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaportprova\\avaloniaportprova\\windowrealtimedash.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\windowrealtimedash.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaportprova\\avaloniaportprova\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaport\\avaloniaportprova\\avaloniaportprova\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaportprova\\avaloniaportprova\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaportprova\\avaloniaportprova\\windowannotationclickevent.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\windowannotationclickevent.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaportprova\\avaloniaportprova\\windowannotationclickevent.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaport\\avaloniaportprova\\avaloniaportprova\\windowannotationclickevent.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\windowannotationclickevent.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -51,79 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WindowRealtimeDash.axaml.cs",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowRealtimeDash.axaml.cs",
-              "RelativeDocumentMoniker": "AvaloniaPortProva\\WindowRealtimeDash.axaml.cs",
-              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowRealtimeDash.axaml.cs",
-              "RelativeToolTip": "AvaloniaPortProva\\WindowRealtimeDash.axaml.cs",
-              "ViewState": "AgIAAMo6AAAAAAAAAAAqwOg6AAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T07:38:14.353Z",
+              "Title": "WindowAnnotationClickEvent.axaml",
+              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
+              "RelativeDocumentMoniker": "AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
+              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\WindowAnnotationClickEvent.axaml*",
+              "RelativeToolTip": "AvaloniaPortProva\\WindowAnnotationClickEvent.axaml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T12:23:45.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WindowRealtimeDash.axaml",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowRealtimeDash.axaml",
-              "RelativeDocumentMoniker": "AvaloniaPortProva\\WindowRealtimeDash.axaml",
-              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowRealtimeDash.axaml",
-              "RelativeToolTip": "AvaloniaPortProva\\WindowRealtimeDash.axaml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-03T07:37:28.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WindowAnnotationClickEvent.axaml",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
-              "RelativeDocumentMoniker": "AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
-              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
-              "RelativeToolTip": "AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-02T07:19:25.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WindowAnnotationClickEvent.axaml.cs",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowAnnotationClickEvent.axaml.cs",
-              "RelativeDocumentMoniker": "AvaloniaPortProva\\WindowAnnotationClickEvent.axaml.cs",
-              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\WindowAnnotationClickEvent.axaml.cs",
-              "RelativeToolTip": "AvaloniaPortProva\\WindowAnnotationClickEvent.axaml.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T07:19:25.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\MainWindow.axaml",
+              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\MainWindow.axaml",
               "RelativeDocumentMoniker": "AvaloniaPortProva\\MainWindow.axaml",
-              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\MainWindow.axaml",
+              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\MainWindow.axaml",
               "RelativeToolTip": "AvaloniaPortProva\\MainWindow.axaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-02T07:02:36.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\MainWindow.axaml.cs",
-              "RelativeDocumentMoniker": "AvaloniaPortProva\\MainWindow.axaml.cs",
-              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPortProva\\AvaloniaPortProva\\MainWindow.axaml.cs",
-              "RelativeToolTip": "AvaloniaPortProva\\MainWindow.axaml.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAiwCsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T07:02:36.721Z",
+              "WhenOpened": "2026-06-04T12:23:43.714Z",
               "EditorCaption": ""
             }
           ]

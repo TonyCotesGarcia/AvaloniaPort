@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	    xmlns:teechart="clr-namespace:Steema.TeeChart.Avalonia;assembly=TeeChart.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaPortProva.AvaloniaLliure"
+        Title="AvaloniaLliure"
+		WindowStartupLocation="CenterScreen">
+	<DockPanel>
+
+		<Border DockPanel.Dock="Top"
+				Background="#202225"
+				Padding="10">
+
+			<StackPanel>
+				<TextBlock Text="Avalonia Lliure"
+						   FontSize="28"
+						   FontWeight="Bold"
+						   HorizontalAlignment="Center"
+						   Foreground="White"/>
+
+				<TextBlock Text="App de Avalonia feta sense port"
+						   FontSize="13"
+						   Opacity="0.7"
+						   HorizontalAlignment="Center"
+						   Foreground="White"/>
+				<Button HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Click="onClick_Tornar">Tornar Enrere</Button>
+				<Button Name="StartStop" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White">Start Stop</Button>
+
+			</StackPanel>
+
+		</Border>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="2*" />
+				<ColumnDefinition Width="2*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="2*" />
+				<RowDefinition Height="2*" />
+			</Grid.RowDefinitions>
+			<teechart:TChart Name="tChart1" Grid.Column="0" Grid.Row="0"></teechart:TChart>
+			<teechart:TChart Name="tChart2" Grid.Column="1" Grid.Row="0"></teechart:TChart>
+			<teechart:TChart Name="tChart3" Grid.Column="0" Grid.Row="1"></teechart:TChart>
+			<teechart:TChart Name="tChart4" Grid.Column="1" Grid.Row="1"></teechart:TChart>
+		</Grid>
+	</DockPanel>
+</Window>
