@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaport\\avaloniaportprova\\avaloniaportprova\\avalonialliure.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\avalonialliure.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaport\\avaloniaportprova\\avaloniaportprova\\avaloniaportprova.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\avaloniaportprova.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaport\\avaloniaportprova\\avaloniaportprova\\windowannotationclickevent.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A3513730-93C8-E211-6553-264DA0EF159B}|AvaloniaPortProva\\AvaloniaPortProva.csproj|solutionrelative:avaloniaportprova\\windowannotationclickevent.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -18,15 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -35,6 +39,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AvaloniaLliure.axaml.cs",
+              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\AvaloniaLliure.axaml.cs",
+              "RelativeDocumentMoniker": "AvaloniaPortProva\\AvaloniaLliure.axaml.cs",
+              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\AvaloniaLliure.axaml.cs",
+              "RelativeToolTip": "AvaloniaPortProva\\AvaloniaLliure.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T10:33:21.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AvaloniaPortProva",
+              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\AvaloniaPortProva.csproj",
+              "RelativeDocumentMoniker": "AvaloniaPortProva\\AvaloniaPortProva.csproj",
+              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\AvaloniaPortProva.csproj",
+              "RelativeToolTip": "AvaloniaPortProva\\AvaloniaPortProva.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-16T10:28:28.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "WindowAnnotationClickEvent.axaml",
               "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
               "RelativeDocumentMoniker": "AvaloniaPortProva\\WindowAnnotationClickEvent.axaml",
@@ -47,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaPortProva\\AvaloniaPortProva\\MainWindow.axaml",
               "RelativeDocumentMoniker": "AvaloniaPortProva\\MainWindow.axaml",

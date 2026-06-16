@@ -1,6 +1,3 @@
 <Solution>
-  <Project Path="../../../../repo/TeeChartForNET/TeeChart.NET_Sources/TeeChart.PCL.NET10/Headless/TeeChart/TeeChart.csproj" />
-  <Project Path="../../../../repo/TeeChartForNET/TeeChart.NET_Sources/TeeChart.PCL.NET10/TeeChart.Avalonia/TeeChart.Avalonia.csproj" />
-  <Project Path="../../../../repo/TeeChartForNET/TeeChart.NET_Sources/TeeChart.PCL.NET10/TeeChart.Xaml.Avalonia/TeeChart.Xaml.Avalonia.csproj" />
   <Project Path="AvaloniaPortProva/AvaloniaPortProva.csproj" />
 </Solution>

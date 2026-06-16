@@ -566,7 +566,7 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/10.0.8": {
+      "Microsoft.Win32.SystemEvents/10.0.9": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
@@ -614,34 +614,34 @@
           }
         }
       },
-      "PdfSharpCore/1.3.67": {
+      "PdfSharpCore/1.3.57": {
         "type": "package",
         "dependencies": {
-          "SharpZipLib": "1.4.2",
+          "SharpZipLib": "1.3.3",
           "SixLabors.Fonts": "1.0.0-beta17",
           "SixLabors.ImageSharp": "1.0.4"
         },
         "compile": {
-          "lib/net8.0/PdfSharpCore.dll": {}
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net8.0/PdfSharpCore.dll": {}
+          "lib/net6.0/PdfSharpCore.dll": {}
         },
         "resource": {
-          "lib/net8.0/de/PdfSharpCore.resources.dll": {
+          "lib/net6.0/de/PdfSharpCore.resources.dll": {
             "locale": "de"
           }
         }
       },
-      "SharpZipLib/1.4.2": {
+      "SharpZipLib/1.3.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
+          "lib/netstandard2.1/_._": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
+          "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -649,7 +649,7 @@
       "SixLabors.Fonts/1.0.0-beta17": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".xml"
           }
         },
@@ -662,7 +662,7 @@
       "SixLabors.ImageSharp/1.0.4": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+          "lib/netcoreapp3.1/_._": {
             "related": ".xml"
           }
         },
@@ -869,11 +869,28 @@
           }
         }
       },
-      "System.Configuration.ConfigurationManager/10.0.8": {
+      "Steema.TeeChart.NET.Avalonia/5.2026.6.15": {
         "type": "package",
         "dependencies": {
-          "System.Diagnostics.EventLog": "10.0.8",
-          "System.Security.Cryptography.ProtectedData": "10.0.8"
+          "PdfSharpCore": "1.3.57",
+          "System.Data.DataSetExtensions": "4.5.0"
+        },
+        "compile": {
+          "lib/net10.0/TeeChart.Avalonia.dll": {},
+          "lib/net10.0/TeeChart.Xaml.Avalonia.dll": {},
+          "lib/net10.0/TeeChart.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/TeeChart.Avalonia.dll": {},
+          "lib/net10.0/TeeChart.Xaml.Avalonia.dll": {},
+          "lib/net10.0/TeeChart.dll": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/10.0.9": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "10.0.9",
+          "System.Security.Cryptography.ProtectedData": "10.0.9"
         },
         "compile": {
           "lib/net10.0/System.Configuration.ConfigurationManager.dll": {
@@ -892,13 +909,13 @@
       "System.Data.DataSetExtensions/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Data.DataSetExtensions.dll": {}
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Data.DataSetExtensions.dll": {}
         }
       },
-      "System.Diagnostics.EventLog/10.0.8": {
+      "System.Diagnostics.EventLog/10.0.9": {
         "type": "package",
         "compile": {
           "lib/net10.0/System.Diagnostics.EventLog.dll": {
@@ -924,10 +941,10 @@
           }
         }
       },
-      "System.Drawing.Common/10.0.8": {
+      "System.Drawing.Common/10.0.9": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "10.0.8"
+          "Microsoft.Win32.SystemEvents": "10.0.9"
         },
         "compile": {
           "lib/net10.0/System.Drawing.Common.dll": {
@@ -955,7 +972,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.Security.Cryptography.ProtectedData/10.0.8": {
+      "System.Security.Cryptography.ProtectedData/10.0.9": {
         "type": "package",
         "compile": {
           "lib/net10.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -982,34 +999,6 @@
           "lib/net9.0/Tmds.DBus.Protocol.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "TeeChart/6.2026.6.7": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "System.Data.DataSetExtensions": "4.5.0"
-        },
-        "compile": {
-          "bin/placeholder/TeeChart.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TeeChart.dll": {}
-        }
-      },
-      "TeeChart.Avalonia/5.2026.6.4": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "Avalonia": "12.0.4",
-          "PdfSharpCore": "1.3.67",
-          "TeeChart": "6.2026.6.7"
-        },
-        "compile": {
-          "bin/placeholder/TeeChart.Avalonia.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TeeChart.Avalonia.dll": {}
         }
       }
     }
@@ -1726,10 +1715,10 @@
         "microsoft.io.recyclablememorystream.nuspec"
       ]
     },
-    "Microsoft.Win32.SystemEvents/10.0.8": {
-      "sha512": "J9+VT0lkrA7wW38CGxO2sZd+iH9C0qzioMi/2ztpT32WOVr+04uNqFIrxisTRf+mvtXLtdqcio1AoS0vfAVLLQ==",
+    "Microsoft.Win32.SystemEvents/10.0.9": {
+      "sha512": "dk5HKolAR9bBxlL4dl6Koaf0s/Q47QApog+/o341LSuvWGW6ig4q5fTsgYG0MrK//l2Slv6mygncMK/8lgXVDg==",
       "type": "package",
-      "path": "microsoft.win32.systemevents/10.0.8",
+      "path": "microsoft.win32.systemevents/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1750,7 +1739,7 @@
         "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.10.0.8.nupkg.sha512",
+        "microsoft.win32.systemevents.10.0.9.nupkg.sha512",
         "microsoft.win32.systemevents.nuspec",
         "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.xml",
@@ -1813,49 +1802,44 @@
         "packageIcon.png"
       ]
     },
-    "PdfSharpCore/1.3.67": {
-      "sha512": "6Cvj9nX6RwIJFIQC8eJFCYYUu9Qa2t9LWh4i0SXFi3hqkX/ssUGKfzp+9JZZXbkp0lHeeH/9UYFHelLqIusPrQ==",
+    "PdfSharpCore/1.3.57": {
+      "sha512": "/BQyPf5v2Yr7bkxneyamPgMrHk0hNQ+yhR6FTlCWTQNI7WSkSwOE1YZt8LUEfkruoFly9sZeMuz+d7srKP6bgw==",
       "type": "package",
-      "path": "pdfsharpcore/1.3.67",
+      "path": "pdfsharpcore/1.3.57",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
-        "README.md",
         "lib/net5.0/PdfSharpCore.dll",
         "lib/net5.0/de/PdfSharpCore.resources.dll",
         "lib/net6.0/PdfSharpCore.dll",
         "lib/net6.0/de/PdfSharpCore.resources.dll",
-        "lib/net7.0/PdfSharpCore.dll",
-        "lib/net7.0/de/PdfSharpCore.resources.dll",
-        "lib/net8.0/PdfSharpCore.dll",
-        "lib/net8.0/de/PdfSharpCore.resources.dll",
         "lib/netcoreapp3.1/PdfSharpCore.dll",
         "lib/netcoreapp3.1/de/PdfSharpCore.resources.dll",
         "lib/netstandard2.0/PdfSharpCore.dll",
         "lib/netstandard2.0/de/PdfSharpCore.resources.dll",
-        "pdfsharpcore.1.3.67.nupkg.sha512",
+        "pdfsharpcore.1.3.57.nupkg.sha512",
         "pdfsharpcore.nuspec"
       ]
     },
-    "SharpZipLib/1.4.2": {
-      "sha512": "yjj+3zgz8zgXpiiC3ZdF/iyTBbz2fFvMxZFEBPUcwZjIvXOf37Ylm+K58hqMfIBt5JgU/Z2uoUS67JmTLe973A==",
+    "SharpZipLib/1.3.3": {
+      "sha512": "N8+hwhsKZm25tDJfWpBSW7EGhH/R7EMuiX+KJ4C4u+fCWVc1lJ5zg1u3S1RPPVYgTqhx/C3hxrqUpi6RwK5+Tg==",
       "type": "package",
-      "path": "sharpziplib/1.4.2",
+      "path": "sharpziplib/1.3.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "images/sharpziplib-nuget-256x256.png",
-        "lib/net6.0/ICSharpCode.SharpZipLib.dll",
-        "lib/net6.0/ICSharpCode.SharpZipLib.pdb",
-        "lib/net6.0/ICSharpCode.SharpZipLib.xml",
+        "lib/net45/ICSharpCode.SharpZipLib.dll",
+        "lib/net45/ICSharpCode.SharpZipLib.pdb",
+        "lib/net45/ICSharpCode.SharpZipLib.xml",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.pdb",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.xml",
         "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
         "lib/netstandard2.1/ICSharpCode.SharpZipLib.pdb",
         "lib/netstandard2.1/ICSharpCode.SharpZipLib.xml",
-        "sharpziplib.1.4.2.nupkg.sha512",
+        "sharpziplib.1.3.3.nupkg.sha512",
         "sharpziplib.nuspec"
       ]
     },
@@ -2279,10 +2263,35 @@
         "skiasharp.views.wpf.nuspec"
       ]
     },
-    "System.Configuration.ConfigurationManager/10.0.8": {
-      "sha512": "QG+HHwJjLyUiRuA9axr5pDqHAxboo7FXCTRakxMABE9CUAUij/tsd/MsgQPJUEppkf+YBLT+F/P/wKIVCAIcNg==",
+    "Steema.TeeChart.NET.Avalonia/5.2026.6.15": {
+      "sha512": "ssmsm341IYl6B85pu1Mpw8+wd8WGl0PW+vTJ8J++u0JiLs79aJGLfIbfckvLYEPGv+CwAeHap/cD2nqvPn/iPw==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/10.0.8",
+      "path": "steema.teechart.net.avalonia/5.2026.6.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "README.md",
+        "Steema.TeeChart.chm",
+        "Support.txt",
+        "TeeChart_Pro_Net_Tutorials.chm",
+        "lib/net10.0/TeeChart.Avalonia.dll",
+        "lib/net10.0/TeeChart.Xaml.Avalonia.dll",
+        "lib/net10.0/TeeChart.dll",
+        "lib/net8.0/TeeChart.Avalonia.dll",
+        "lib/net8.0/TeeChart.Xaml.Avalonia.dll",
+        "lib/net8.0/TeeChart.dll",
+        "lib/netstandard2.0/TeeChart.Avalonia.dll",
+        "lib/netstandard2.0/TeeChart.Xaml.Avalonia.dll",
+        "lib/netstandard2.0/TeeChart.dll",
+        "steema.teechart.net.avalonia.5.2026.6.15.nupkg.sha512",
+        "steema.teechart.net.avalonia.nuspec"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/10.0.9": {
+      "sha512": "k7kYSTmNjwFYKdUju+rjYyigbcUBj1sElR3ayqszcatPXL9YJoBANJN48xctdXTopYf3ceFX2T4m1xvJRM+CGA==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2303,7 +2312,7 @@
         "lib/net9.0/System.Configuration.ConfigurationManager.xml",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.10.0.8.nupkg.sha512",
+        "system.configuration.configurationmanager.10.0.9.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2327,10 +2336,10 @@
         "version.txt"
       ]
     },
-    "System.Diagnostics.EventLog/10.0.8": {
-      "sha512": "+Ro7WgIom+BDNH+YhTuZKL6QJ0ctfOpTyfUG/h3aU5KwXt3OaNf0wYWrTvoBUj+34Dy5V8dN9yCco1hAJQ4txw==",
+    "System.Diagnostics.EventLog/10.0.9": {
+      "sha512": "s2PcxHK4IYQ6gmD3VSBkym9tWGkFisKjcjWBdl7a+n4Yy66ae4beJ1ZdjDp060SSll4W3Rt4H2LW87dWckv+QQ==",
       "type": "package",
-      "path": "system.diagnostics.eventlog/10.0.8",
+      "path": "system.diagnostics.eventlog/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2360,15 +2369,15 @@
         "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll",
         "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll",
         "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.xml",
-        "system.diagnostics.eventlog.10.0.8.nupkg.sha512",
+        "system.diagnostics.eventlog.10.0.9.nupkg.sha512",
         "system.diagnostics.eventlog.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Drawing.Common/10.0.8": {
-      "sha512": "LCISd6JAF80vsy9L6wuetZeOMR3FH+SwKovw5Zl0Nov9pB9ZOiCSqvOfMzooypPItQLv0mGfEePjJ1nCCQztNw==",
+    "System.Drawing.Common/10.0.9": {
+      "sha512": "ShkEj8jOhklJgrN3SoaVbCcopvqyIgVXHso2/eibQBL7IZxzJjND77UYVlViHqpwPxyQeA67IOut4b41clBkQw==",
       "type": "package",
-      "path": "system.drawing.common/10.0.8",
+      "path": "system.drawing.common/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2413,15 +2422,15 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.drawing.common.10.0.8.nupkg.sha512",
+        "system.drawing.common.10.0.9.nupkg.sha512",
         "system.drawing.common.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/10.0.8": {
-      "sha512": "/ldVgSfImIBp6fLWS7sLH0BnmtFj0ZwGlZo4Xx2q0K3ZhJNDbW45kj2f6zPoC+L+BTINuHdMzTsopuwmkbgcNA==",
+    "System.Security.Cryptography.ProtectedData/10.0.9": {
+      "sha512": "vXp+vBQbTkMrDzUiPCxo1KvzfaAvZWuSRS2P7e5orhtV7ZuePKAB3Cqc9dH2YHUavRJyA2uWd2yrL6hl2VoJ5g==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/10.0.8",
+      "path": "system.security.cryptography.protecteddata/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2448,7 +2457,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.security.cryptography.protecteddata.10.0.8.nupkg.sha512",
+        "system.security.cryptography.protecteddata.10.0.9.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2475,16 +2484,6 @@
         "tmds.dbus.protocol.0.92.0.nupkg.sha512",
         "tmds.dbus.protocol.nuspec"
       ]
-    },
-    "TeeChart/6.2026.6.7": {
-      "type": "project",
-      "path": "../../../../../repo/TeeChartForNET/TeeChart.NET_Sources/TeeChart.PCL.NET10/Headless/TeeChart/TeeChart.csproj",
-      "msbuildProject": "../../../../../repo/TeeChartForNET/TeeChart.NET_Sources/TeeChart.PCL.NET10/Headless/TeeChart/TeeChart.csproj"
-    },
-    "TeeChart.Avalonia/5.2026.6.4": {
-      "type": "project",
-      "path": "../../../../../repo/TeeChartForNET/TeeChart.NET_Sources/TeeChart.PCL.NET10/TeeChart.Avalonia/TeeChart.Avalonia.csproj",
-      "msbuildProject": "../../../../../repo/TeeChartForNET/TeeChart.NET_Sources/TeeChart.PCL.NET10/TeeChart.Avalonia/TeeChart.Avalonia.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2497,9 +2496,9 @@
       "LottieSharp >= 2.4.3",
       "MessageBox.Avalonia >= 12.0.0",
       "Newtonsoft.Json >= 13.0.4",
-      "System.Configuration.ConfigurationManager >= 10.0.8",
-      "System.Drawing.Common >= 10.0.8",
-      "TeeChart.Avalonia >= 5.2026.6.4"
+      "Steema.TeeChart.NET.Avalonia >= 5.2026.6.15",
+      "System.Configuration.ConfigurationManager >= 10.0.9",
+      "System.Drawing.Common >= 10.0.9"
     ]
   },
   "packageFolders": {
@@ -2535,11 +2534,7 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {
-            "C:\\data\\repo\\TeeChartForNET\\TeeChart.NET_Sources\\TeeChart.PCL.NET10\\TeeChart.Avalonia\\TeeChart.Avalonia.csproj": {
-              "projectPath": "C:\\data\\repo\\TeeChartForNET\\TeeChart.NET_Sources\\TeeChart.PCL.NET10\\TeeChart.Avalonia\\TeeChart.Avalonia.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -2591,13 +2586,17 @@
             "target": "Package",
             "version": "[13.0.4, )"
           },
+          "Steema.TeeChart.NET.Avalonia": {
+            "target": "Package",
+            "version": "[5.2026.6.15, )"
+          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
-            "version": "[10.0.8, )"
+            "version": "[10.0.9, )"
           },
           "System.Drawing.Common": {
             "target": "Package",
-            "version": "[10.0.8, )"
+            "version": "[10.0.9, )"
           }
         },
         "imports": [
@@ -2616,7 +2615,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

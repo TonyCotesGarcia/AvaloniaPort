@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AvaloniaPortProva")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d629f6a008d249afe96e4cb77f1c62c383f4cad8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f8072cc5b18b2814af87709444579a9e4e72c60")]
 [assembly: System.Reflection.AssemblyProductAttribute("AvaloniaPortProva")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AvaloniaPortProva")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
