@@ -8,53 +8,66 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AvaloniaMeteo.Properties {
-    
-    
+namespace AvaloniaMeteo.Properties
+{
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.12.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
-            get {
+
+        public static Settings Default
+        {
+            get
+            {
                 return defaultInstance;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Valor {
-            get {
+        public string Valor
+        {
+            get
+            {
                 return ((string)(this["Valor"]));
             }
-            set {
+            set
+            {
                 this["Valor"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("en.txt")]
-        public string lang {
-            get {
+        public string lang
+        {
+            get
+            {
                 return ((string)(this["lang"]));
             }
-            set {
+            set
+            {
                 this["lang"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string RecentCities {
-            get {
+        public string RecentCities
+        {
+            get
+            {
                 return ((string)(this["RecentCities"]));
             }
-            set {
+            set
+            {
                 this["RecentCities"] = value;
             }
         }

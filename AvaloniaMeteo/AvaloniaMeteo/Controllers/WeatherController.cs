@@ -33,7 +33,7 @@ namespace AvaloniaMeteo.Controllers
         {
             try
             {
-                if(string.IsNullOrEmpty(cityQuery) || cityQuery.Length < 3)
+                if (string.IsNullOrEmpty(cityQuery) || cityQuery.Length < 3)
                     return new List<Location>();
 
                 string url = $"http://api.weatherapi.com/v1/search.json?key={API_KEY}&q={cityQuery}";
@@ -46,7 +46,7 @@ namespace AvaloniaMeteo.Controllers
 
                 return suggestions ?? new List<Location>();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return new List<Location>();
             }

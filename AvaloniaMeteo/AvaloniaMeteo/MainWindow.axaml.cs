@@ -43,7 +43,7 @@ namespace AvaloniaMeteo
         // Chart Tools
         NearestPoint toolNPTemp = null;
         NearestPoint toolNPHumidity = null;
-        Steema.TeeChart.Tools.Annotation annotation;
+        Annotation annotation;
         Axis vertAxis, horizAxis;
 
         // Lists
@@ -97,7 +97,7 @@ namespace AvaloniaMeteo
             ChartTemp.Panel.Gradient.Visible = true;
             ChartTemp.Panel.Gradient.StartColor = Color.FromArgb(255, 255, 255);
             ChartTemp.Panel.Gradient.EndColor = Color.FromArgb(250, 252, 255);
-            ChartTemp.Panel.Gradient.Direction = Steema.TeeChart.Drawing.LinearGradientMode.Vertical;
+            ChartTemp.Panel.Gradient.Direction = LinearGradientMode.Vertical;
 
             ChartTemp.Axes.Bottom.Grid.Visible = false;
             ChartTemp.Axes.Bottom.Labels.Font.Size = 8;
@@ -110,14 +110,14 @@ namespace AvaloniaMeteo
             ChartTemp.Header.Font.Bold = true;
             ChartTemp.Header.Font.Color = Color.FromArgb(80, 102, 120);
             ChartTemp.Header.Font.Name = "Segoe UI";
-            ChartTemp.Header.Alignment = (Steema.TeeChart.Drawing.StringAlignment)TextAlignment.Right;
+            ChartTemp.Header.Alignment = (StringAlignment)TextAlignment.Right;
             ChartTemp.Header.Transparent = true;
 
             ChartTempAndHumidity.Header.Font.Size = 14;
             ChartTempAndHumidity.Header.Font.Bold = true;
             ChartTempAndHumidity.Header.Font.Color = Color.FromArgb(80, 102, 120);
             ChartTempAndHumidity.Header.Font.Name = "Segoe UI";
-            ChartTempAndHumidity.Header.Alignment = (Steema.TeeChart.Drawing.StringAlignment)TextAlignment.Right;
+            ChartTempAndHumidity.Header.Alignment = (StringAlignment)TextAlignment.Right;
             ChartTempAndHumidity.Header.Transparent = true;
 
             #endregion
@@ -126,7 +126,7 @@ namespace AvaloniaMeteo
 
         private void InitializeSearchTimer()
         {
-            searchTimer = new System.Timers.Timer(500); // 500ms delay
+            searchTimer = new System.Timers.Timer(500);
             searchTimer.Elapsed += async (s, e) => await SearchLocationsAsync();
             searchTimer.AutoReset = false;
         }
@@ -143,10 +143,8 @@ namespace AvaloniaMeteo
                         var suggestions = await weatherController.GetLocationSuggestionsAsync(query);
                         currentSuggestions = suggestions;
 
-                        // Filter suggestions to those with non-empty Name
                         var filtered = suggestions.Where(s => !string.IsNullOrWhiteSpace(s.Name)).ToList();
 
-                        // Keep the field in sync so other handlers can refer to the same list
                         currentSuggestions = filtered;
 
                         if (filtered.Any())
@@ -181,7 +179,6 @@ namespace AvaloniaMeteo
             }
             catch (Exception ex)
             {
-                // Log error if needed
                 recentCities = new List<string>();
 
             }
@@ -196,7 +193,6 @@ namespace AvaloniaMeteo
             }
             catch (Exception ex)
             {
-                // Log error if needed
             }
         }
 
@@ -204,13 +200,12 @@ namespace AvaloniaMeteo
         {
             if (string.IsNullOrWhiteSpace(cityName)) return;
 
-            cityName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(cityName.ToLower());
+            cityName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(cityName.ToLower());
 
             recentCities.Remove(cityName);
 
             recentCities.Insert(0, cityName);
 
-            // Keep only the latest MAX_RECENT_CITIES cities
             if (recentCities.Count > MAX_RECENT_CITIES)
             {
                 recentCities = recentCities.Take(MAX_RECENT_CITIES).ToList();
@@ -220,7 +215,6 @@ namespace AvaloniaMeteo
             SaveRecentCities();
         }
 
-        // Method for updating the visual list
         private void UpdateRecentCitiesList()
         {
             lstCities.Items.Clear();
@@ -249,7 +243,7 @@ namespace AvaloniaMeteo
             {
                 for (int i = ChartTemp.Tools.Count - 1; i >= 0; i--)
                 {
-                    if (ChartTemp.Tools[i] is Steema.TeeChart.Tools.Annotation)
+                    if (ChartTemp.Tools[i] is Annotation)
                     {
                         ChartTemp.Tools.RemoveAt(i);
                     }
@@ -269,20 +263,17 @@ namespace AvaloniaMeteo
 
                     if (day2 != null)
                     {
-                        //// If the condition is met, then it translates the translation of its respective attribute+
-                        day1 = Languages.Language.info.ContainsKey(day1) ? Languages.Language.info[day1] : day1;
-                        day2 = Languages.Language.info.ContainsKey(day2) ? Languages.Language.info[day2] : day2;
+                        day1 = Language.info.ContainsKey(day1) ? Language.info[day1] : day1;
+                        day2 = Language.info.ContainsKey(day2) ? Language.info[day2] : day2;
                     }
 
-                    // Annotation of the first day 
-                    Steema.TeeChart.Tools.Annotation annotationLeft = new Annotation(ChartTemp.Chart);
+                    Annotation annotationLeft = new Annotation(ChartTemp.Chart);
                     annotationLeft.Text = day1;
                     annotationLeft.Left = pixelX - 95 - 40;
                     annotationLeft.Top = ChartTemp.Axes.Left.IStartPos + 10;
                     annotationLeft.Shape.Transparent = true;
                     ChartTemp.Tools.Add(annotationLeft);
 
-                    // Create second day annotation only if `day2` is not null
                     if (day2 != null)
                     {
                         Annotation annotationRight = new Annotation(ChartTemp.Chart);
@@ -320,9 +311,9 @@ namespace AvaloniaMeteo
                     DateTime date = DateTime.Parse(allTemperatures.forecastday[i].date);
                     string dayOfTheWeek = date.ToString("dddd");
 
-                    if (Languages.Language.info.ContainsKey(dayOfTheWeek))
+                    if (Language.info.ContainsKey(dayOfTheWeek))
                     {
-                        dayOfTheWeek = Languages.Language.info[dayOfTheWeek];
+                        dayOfTheWeek = Language.info[dayOfTheWeek];
                     }
 
                     string dayFormatted = $"{dayOfTheWeek} ({date:dd/MM})";
@@ -360,11 +351,11 @@ namespace AvaloniaMeteo
             if (ChartTempAndHumidity == null || allTemperatures == null || allTemperatures.forecastday.Count == 0)
                 return;
 
-            string headerTxt = Languages.Language.info.ContainsKey("Forecast_by_hour") ? Languages.Language.info["Forecast_by_hour"] : "PREVICIÓ PER HORES";
+            string headerTxt = Language.info.ContainsKey("Forecast_by_hour") ? Language.info["Forecast_by_hour"] : "PREVICIÓ PER HORES";
             ChartTemp.Header.Text = headerTxt;
 
-            string evolutionText = Languages.Language.info.ContainsKey("EVOLUTION_OF_DAY") ? Languages.Language.info["EVOLUTION_OF_DAY"] : "EVOLUCIÓ DEL DIA";
-            string tempHumText = Languages.Language.info.ContainsKey("TEMP_HUMIDITY") ? Languages.Language.info["TEMP_HUMIDITY"] : "Temperatura / Humitat relativa";
+            string evolutionText = Language.info.ContainsKey("EVOLUTION_OF_DAY") ? Language.info["EVOLUTION_OF_DAY"] : "EVOLUCIÓ DEL DIA";
+            string tempHumText = Language.info.ContainsKey("TEMP_HUMIDITY") ? Language.info["TEMP_HUMIDITY"] : "Temperatura / Humitat relativa";
 
             ChartTempAndHumidity.Header.Text = $"{evolutionText}: {allTemperatures.forecastday[0].date}";
             ChartTempAndHumidity.SubHeader.Text = tempHumText;
@@ -372,9 +363,9 @@ namespace AvaloniaMeteo
             if (ChartTempAndHumidity.Series.Count >= 2)
             {
 
-                string tempText = Languages.Language.info.ContainsKey("TemperatureTchart2") ? Languages.Language.info["TemperatureTchart2"] : "Temperature (ºC)";
+                string tempText = Language.info.ContainsKey("TemperatureTchart2") ? Language.info["TemperatureTchart2"] : "Temperature (ºC)";
 
-                string humText = Languages.Language.info.ContainsKey("HumidityTchart2") ? Languages.Language.info["HumidityTchart2"] : "Humidity (%)";
+                string humText = Language.info.ContainsKey("HumidityTchart2") ? Language.info["HumidityTchart2"] : "Humidity (%)";
 
                 ChartTempAndHumidity.Series[0].Title = tempText;
                 ChartTempAndHumidity.Series[1].Title = humText;
@@ -451,7 +442,7 @@ namespace AvaloniaMeteo
             barSeries.Gradient.Visible = true;
             barSeries.Gradient.StartColor = Color.LightBlue;
             barSeries.Gradient.EndColor = Color.FromArgb(136, 193, 231);
-            barSeries.Gradient.Direction = Steema.TeeChart.Drawing.LinearGradientMode.ForwardDiagonal;
+            barSeries.Gradient.Direction = LinearGradientMode.ForwardDiagonal;
             barSeries.Transparency = 20;
             barSeries.BarWidthPercent = 60;
             barSeries.BarStyle = BarStyles.RectGradient;
@@ -460,7 +451,7 @@ namespace AvaloniaMeteo
             // Removes previous annotations
             for (int i = ChartTemp.Tools.Count - 1; i >= 0; i--)
             {
-                if (ChartTemp.Tools[i] is Steema.TeeChart.Tools.Annotation)
+                if (ChartTemp.Tools[i] is Annotation)
                 {
                     ChartTemp.Tools.RemoveAt(i);
                 }
@@ -473,7 +464,7 @@ namespace AvaloniaMeteo
 
             if (allTemperatures != null && allTemperatures.forecastday.Count > 0)
             {
-                string headerTxt = Languages.Language.info.ContainsKey("FORECAST_7_DAYS") ? Languages.Language.info["FORECAST_7_DAYS"] : "FORECAST(7 DAYS)";
+                string headerTxt = Language.info.ContainsKey("FORECAST_7_DAYS") ? Language.info["FORECAST_7_DAYS"] : "FORECAST(7 DAYS)";
                 ChartTemp.Header.Text = headerTxt;
 
                 foreach (Forecastday day in allTemperatures.forecastday)
@@ -481,8 +472,8 @@ namespace AvaloniaMeteo
                     DateTime date = DateTime.Parse(day.date);
                     string dayOfTheWeek = date.ToString("dddd");
 
-                    if (Languages.Language.info.ContainsKey(dayOfTheWeek))
-                        dayOfTheWeek = Languages.Language.info[dayOfTheWeek];
+                    if (Language.info.ContainsKey(dayOfTheWeek))
+                        dayOfTheWeek = Language.info[dayOfTheWeek];
 
                     string dateKey = date.ToString("yyyy-MM-dd");
                     daysWithDates[date] = dayOfTheWeek;
@@ -548,7 +539,7 @@ namespace AvaloniaMeteo
             barSeries.Gradient.Visible = true;
             barSeries.Gradient.StartColor = Color.LightBlue;
             barSeries.Gradient.EndColor = Color.FromArgb(136, 193, 231);
-            barSeries.Gradient.Direction = Steema.TeeChart.Drawing.LinearGradientMode.ForwardDiagonal;
+            barSeries.Gradient.Direction = LinearGradientMode.ForwardDiagonal;
             barSeries.Transparency = 20;
             barSeries.Pen.Visible = true;
             barSeries.Pen.Width = 1;
@@ -563,7 +554,7 @@ namespace AvaloniaMeteo
                 daysWithDates.Clear();
             }
 
-            string headerTxt = Languages.Language.info.ContainsKey("Forecast_by_hour") ? Languages.Language.info["Forecast_by_hour"] : "FORECAST BY HOUR";
+            string headerTxt = Language.info.ContainsKey("Forecast_by_hour") ? Language.info["Forecast_by_hour"] : "FORECAST BY HOUR";
             ChartTemp.Header.Text = headerTxt;
 
 
@@ -743,8 +734,8 @@ namespace AvaloniaMeteo
             {
                 foreach (Forecastday day in allTemperatures.forecastday)
                 {
-                    string evolutionText = Languages.Language.info.ContainsKey("EVOLUTION_OF_DAY") ? Languages.Language.info["EVOLUTION_OF_DAY"] : "EVOLUTION OF THE DAY";
-                    string tempHumText = Languages.Language.info.ContainsKey("TEMP_HUMIDITY") ? Languages.Language.info["TEMP_HUMIDITY"] : "Temperatura / Humitat relativa";
+                    string evolutionText = Language.info.ContainsKey("EVOLUTION_OF_DAY") ? Language.info["EVOLUTION_OF_DAY"] : "EVOLUTION OF THE DAY";
+                    string tempHumText = Language.info.ContainsKey("TEMP_HUMIDITY") ? Language.info["TEMP_HUMIDITY"] : "Temperatura / Humitat relativa";
 
                     ChartTempAndHumidity.Header.Text = $"{evolutionText}: {allTemperatures.forecastday[0].date}";
                     ChartTempAndHumidity.SubHeader.Text = tempHumText;
@@ -793,10 +784,10 @@ namespace AvaloniaMeteo
 
             ChartTempAndHumidity.Axes.Bottom.Increment = 1.0 / 24.0;  // Increment by 1 hour
 
-            ChartTempAndHumidity.Axes.Left.SetMinMax(0, 20);
+            ChartTempAndHumidity.Axes.Left.SetMinMax(0, 30);
             ChartTempAndHumidity.Axes.Left.Increment = 5;
             ChartTempAndHumidity.Axes.Left.Automatic = false;
-            string tempText = Languages.Language.info.ContainsKey("TemperatureTchart2") ? Languages.Language.info["TemperatureTchart2"] : "Temperature (ºC)";
+            string tempText = Language.info.ContainsKey("TemperatureTchart2") ? Language.info["TemperatureTchart2"] : "Temperature (ºC)";
             ChartTempAndHumidity.Axes.Left.Title.Text = tempText;
             ChartTempAndHumidity.Axes.Left.Title.Font.Size = 10;
             ChartTempAndHumidity.Axes.Left.Title.Font.Bold = true;
@@ -804,7 +795,7 @@ namespace AvaloniaMeteo
             ChartTempAndHumidity.Axes.Right.SetMinMax(0, 100);
             ChartTempAndHumidity.Axes.Right.Increment = 50;
             ChartTempAndHumidity.Axes.Right.Automatic = false;
-            string humText = Languages.Language.info.ContainsKey("HumidityTchart2") ? Languages.Language.info["HumidityTchart2"] : "Humidity (%)";
+            string humText = Language.info.ContainsKey("HumidityTchart2") ? Language.info["HumidityTchart2"] : "Humidity (%)";
             ChartTempAndHumidity.Axes.Right.Title.Text = humText;
             ChartTempAndHumidity.Axes.Right.Title.Font.Size = 10;
             ChartTempAndHumidity.Axes.Right.Title.Font.Bold = true;
@@ -820,7 +811,7 @@ namespace AvaloniaMeteo
 
         private void ConfigureAnottation()
         {
-            annotation = new Steema.TeeChart.Tools.Annotation(ChartTempAndHumidity.Chart);
+            annotation = new Annotation(ChartTempAndHumidity.Chart);
 
             annotation.Shape.Font.Size = 9;
             annotation.Shape.Font.Bold = false;
@@ -837,7 +828,7 @@ namespace AvaloniaMeteo
 
         private Line CreateTemperatureSeries()
         {
-            string titleTemp = Languages.Language.info.ContainsKey("TemperatureTchart2") ? Languages.Language.info["TemperatureTchart2"] : "Temperature (ºC)";
+            string titleTemp = Language.info.ContainsKey("TemperatureTchart2") ? Language.info["TemperatureTchart2"] : "Temperature (ºC)";
             Line lineTemperature = new Line(ChartTempAndHumidity.Chart)
             {
                 Title = titleTemp,
@@ -853,10 +844,10 @@ namespace AvaloniaMeteo
             lineTemperature.Pointer.Gradient.Visible = true;
             lineTemperature.Pointer.Brush.Gradient.StartColor = Color.White;
             lineTemperature.Pointer.Brush.Gradient.EndColor = Color.FromArgb(220, 53, 69);
-            lineTemperature.Pointer.Brush.Gradient.Direction = Steema.TeeChart.Drawing.LinearGradientMode.Vertical;
+            lineTemperature.Pointer.Brush.Gradient.Direction = LinearGradientMode.Vertical;
 
             lineTemperature.LinePen.Width = 3;
-            lineTemperature.LinePen.EndCap = (Steema.TeeChart.Drawing.LineCap)System.Drawing.Drawing2D.LineCap.Round;
+            lineTemperature.LinePen.EndCap = (LineCap)System.Drawing.Drawing2D.LineCap.Round;
 
             // Add marks at the points
             lineTemperature.Marks.Visible = false;
@@ -867,7 +858,7 @@ namespace AvaloniaMeteo
 
         private Line CreateHumiditySeries()
         {
-            string titleHum = Languages.Language.info.ContainsKey("HumidityTchart2") ? Languages.Language.info["HumidityTchart2"] : "Humidity (%)";
+            string titleHum = Language.info.ContainsKey("HumidityTchart2") ? Language.info["HumidityTchart2"] : "Humidity (%)";
             Line lineHumidity = new Line(ChartTempAndHumidity.Chart)
             {
                 Title = titleHum,
@@ -883,12 +874,12 @@ namespace AvaloniaMeteo
             lineHumidity.Pointer.Brush.Gradient.Visible = true;
             lineHumidity.Pointer.Brush.Gradient.StartColor = Color.White;
             lineHumidity.Pointer.Brush.Gradient.EndColor = Color.FromArgb(0, 123, 255);
-            lineHumidity.Pointer.Brush.Gradient.Direction = (Steema.TeeChart.Drawing.LinearGradientMode)GradientDirection.Radial;
+            lineHumidity.Pointer.Brush.Gradient.Direction = (LinearGradientMode)GradientDirection.Radial;
 
             // Configure line appearance
             lineHumidity.LinePen.Width = 3;
             lineHumidity.LinePen.Style = Steema.TeeChart.Drawing.DashStyle.Dash;
-            lineHumidity.LinePen.EndCap = (Steema.TeeChart.Drawing.LineCap)System.Drawing.Drawing2D.LineCap.Round;
+            lineHumidity.LinePen.EndCap = (LineCap)System.Drawing.Drawing2D.LineCap.Round;
 
             lineHumidity.Marks.Visible = false;
             lineHumidity.Marks.Arrow.Visible = false;
@@ -906,7 +897,7 @@ namespace AvaloniaMeteo
             ChartTempAndHumidity.Panel.Gradient.Visible = true;
             ChartTempAndHumidity.Panel.Gradient.StartColor = Color.White;
             ChartTempAndHumidity.Panel.Gradient.EndColor = Color.FromArgb(245, 245, 245);
-            ChartTempAndHumidity.Panel.Gradient.Direction = Steema.TeeChart.Drawing.LinearGradientMode.Vertical;
+            ChartTempAndHumidity.Panel.Gradient.Direction = LinearGradientMode.Vertical;
             ChartTempAndHumidity.Panel.Bevel.Inner = BevelStyles.None;
             ChartTempAndHumidity.Panel.Bevel.Outer = BevelStyles.None;
             ChartTempAndHumidity.Panel.BorderRound = 10;
@@ -976,6 +967,8 @@ namespace AvaloniaMeteo
             {
                 await SearchWeather();
             }
+
+
         }
         #endregion
 
@@ -984,7 +977,7 @@ namespace AvaloniaMeteo
         /// <summary>
         /// Draws vertical lines on the chart at specified X-axis positions after the chart is rendered.
         /// </summary>
-        private void ChartTemp_AfterDraw1(object sender, Steema.TeeChart.Drawing.IGraphics3D g)
+        private void ChartTemp_AfterDraw1(object sender, IGraphics3D g)
         {
             int offsetX = 34;
             foreach (var verticalLineX in verticalLinePositions)
@@ -997,7 +990,7 @@ namespace AvaloniaMeteo
         /// <summary>
         ///  Draw the images on the graph for the temperatures per day, and also for the temperatures per hour.
         /// </summary>
-        private void ChartTemp_AfterDraw(object sender, Steema.TeeChart.Drawing.IGraphics3D g)
+        private void ChartTemp_AfterDraw(object sender, IGraphics3D g)
         {
             // Removes any previous clipping regions that may have been configured
             ChartTemp.Graphics3D.ClearClipRegions();
@@ -1169,8 +1162,8 @@ namespace AvaloniaMeteo
             Line graphLineTemperature = (Line)ChartTempAndHumidity.Series[0];
             Line graphLineHumidity = (Line)ChartTempAndHumidity.Series[1];
 
-            string tempText = Languages.Language.info.ContainsKey("Temperature") ? Languages.Language.info["Temperature"] : "Temperature";
-            string humText = Languages.Language.info.ContainsKey("Humidity") ? Languages.Language.info["Humidity"] : "Humidity";
+            string tempText = Language.info.ContainsKey("Temperature") ? Language.info["Temperature"] : "Temperature";
+            string humText = Language.info.ContainsKey("Humidity") ? Language.info["Humidity"] : "Humidity";
 
 
             int indexTemp = toolNPTemp.Point;
@@ -1233,24 +1226,20 @@ namespace AvaloniaMeteo
             if (ChartTemp.Series.Count == 0 || ChartTemp.Series[0].Count == 0)
                 return;
 
-            // Get the minimum and maximum value of the X-axis according to the position of the ScrollBar
             Bar barSeries = (Bar)ChartTemp.Series[0];
             double minX = barSeries.MinXValue();
             double maxX = barSeries.MaxXValue();
             double visibleRange = (maxX - minX) / 7;
 
-            // Calculate the new display range on the chart
             double newMin = minX + e.NewValue * (maxX - minX - visibleRange) / scrollBarChart.Maximum;
             double newMax = newMin + visibleRange;
 
-            // Prevent the range from going out of bounds
             if (newMax > maxX)
             {
                 newMax = maxX;
                 newMin = newMax - visibleRange;
             }
 
-            // Avoid out-of-range values
             if (newMin < minX)
             {
                 newMin = minX;
@@ -1269,7 +1258,6 @@ namespace AvaloniaMeteo
                     double minDay = kvp.Value.Item1;
                     double maxDay = kvp.Value.Item2;
 
-                    // Check if the visible range intersects with the day's range
                     if ((newMin >= minDay && newMin <= maxDay) ||
                         (newMax >= minDay && newMax <= maxDay) ||
                         (newMin <= minDay && newMax >= maxDay))
@@ -1305,7 +1293,7 @@ namespace AvaloniaMeteo
             }
         }
 
-        private void ChartTemp_BeforeDrawSeries(object sender, Steema.TeeChart.Drawing.IGraphics3D g)
+        private void ChartTemp_BeforeDrawSeries(object sender, IGraphics3D g)
         {
             if (ChartTemp?.Series == null || ChartTemp.Series.Count == 0)
                 return;
@@ -1354,40 +1342,37 @@ namespace AvaloniaMeteo
 
         private void txtSearch_PreviewKeyDown(object sender, Avalonia.Input.KeyEventArgs e)
         {
-            if (suggestionsPopup.IsOpen)
+            if (!suggestionsPopup.IsOpen || suggestionsList.ItemCount == 0)
+                return;
+
+            switch (e.Key)
             {
-                switch (e.Key)
-                {
-                    case Key.Down:
-                        if (suggestionsList.SelectedIndex < suggestionsList.Items.Count - 1)
-                            suggestionsList.SelectedIndex++;
-                        else
-                            suggestionsList.SelectedIndex = 0;
-                        e.Handled = true;
-                        break;
+                case Key.Down:
+                    suggestionsList.SelectedIndex =
+                        (suggestionsList.SelectedIndex + 1) % suggestionsList.ItemCount;
+                    e.Handled = true;
+                    break;
 
-                    case Key.Up:
-                        if (suggestionsList.SelectedIndex > 0)
-                            suggestionsList.SelectedIndex--;
-                        else
-                            suggestionsList.SelectedIndex = suggestionsList.Items.Count - 1;
-                        e.Handled = true;
-                        break;
+                case Key.Up:
+                    suggestionsList.SelectedIndex =
+                        suggestionsList.SelectedIndex <= 0
+                        ? suggestionsList.ItemCount - 1
+                        : suggestionsList.SelectedIndex - 1;
 
-                    case Key.Enter:
-                        if (suggestionsList.SelectedItem is MODELS.Location selected)
-                        {
-                            SelectSuggestion(selected);
-                        }
-                        e.Handled = true;
-                        break;
+                    e.Handled = true;
+                    break;
 
-                    case Key.Escape:
-                        suggestionsPopup.IsOpen = false;
-                        e.Handled = true;
-                        break;
+                case Key.Enter:
+                    if (suggestionsList.SelectedItem is MODELS.Location selected)
+                        SelectSuggestion(selected);
 
-                }
+                    e.Handled = true;
+                    break;
+
+                case Key.Escape:
+                    suggestionsPopup.IsOpen = false;
+                    e.Handled = true;
+                    break;
             }
         }
 
@@ -1416,7 +1401,7 @@ namespace AvaloniaMeteo
                     if (cityFound)
                     {
                         // Sanitize display name before saving recent cities
-                        if (!string.IsNullOrWhiteSpace(displayName) && displayName.Trim(',',' ').Length>0)
+                        if (!string.IsNullOrWhiteSpace(displayName) && displayName.Trim(',', ' ').Length > 0)
                             AddToRecentCities(displayName);
                         GetAllTemperaturesByDays(searchQuery);
                         GetTemperatureAndHumidity(searchQuery);
@@ -1435,26 +1420,35 @@ namespace AvaloniaMeteo
 
         private void txtSearch_LostFocus(object sender, RoutedEventArgs e)
         {
-            // Small delay to allow clicking on suggestions
             Task.Delay(150).ContinueWith(_ =>
             {
                 Dispatcher.UIThread.Invoke(() => suggestionsPopup.IsOpen = false);
             });
         }
 
-        private async void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (isSelectingSuggestion) return;
+            if (isSelectingSuggestion)
+                return;
+
+            // Limpiar la ciudad seleccionada al editar manualmente
+            txtSearch.Tag = null;
 
             string query = txtSearch.Text?.Trim();
 
-            if (string.IsNullOrEmpty(query) || query.Length < 3)
+            searchTimer?.Stop();
+
+            if (string.IsNullOrWhiteSpace(query) || query.Length < 3)
             {
+                currentSuggestions.Clear();
+
+                suggestionsList.ItemsSource = null;
+                suggestionsList.SelectedIndex = -1;
+
                 suggestionsPopup.IsOpen = false;
                 return;
             }
 
-            searchTimer?.Stop();
             searchTimer?.Start();
         }
 

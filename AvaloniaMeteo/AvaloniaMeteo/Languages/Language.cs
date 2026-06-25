@@ -12,7 +12,7 @@ namespace AvaloniaMeteo.Languages
         private static void Load(string file)
         {
             info.Clear();
-          
+
             foreach (string line in File.ReadLines($"..\\..\\..\\Languages\\{file}"))
             {
                 if (line.Contains("="))
@@ -50,7 +50,7 @@ namespace AvaloniaMeteo.Languages
                 if (mainWindow.txtRecentCities != null)
                     mainWindow.txtRecentCities.Text = Language.info.ContainsKey("txtRecentCities") ? Language.info["txtRecentCities"] : "📍Recent Cities";
 
-                if (mainWindow.txtInformation!= null)
+                if (mainWindow.txtInformation != null)
                     mainWindow.txtInformation.Text = Language.info.ContainsKey("txtInformation") ? Language.info["txtInformation"] : "ℹ️ Information";
 
                 if (mainWindow.txtBlockInformation != null)
@@ -63,7 +63,7 @@ namespace AvaloniaMeteo.Languages
                     mainWindow.tabTemperature.Header = Language.info.ContainsKey("tabTemperature") ? Language.info["tabTemperature"] : "Temperature";
 
                 mainWindow.UpdateAnnotations();
-                
+
                 mainWindow.ConfigureAxes();
 
                 mainWindow.UpdateAndLoadForecastDays();
@@ -80,4 +80,3 @@ namespace AvaloniaMeteo.Languages
         }
     }
 }
- 

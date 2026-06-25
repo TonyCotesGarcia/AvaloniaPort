@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AvaloniaMeteo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f8072cc5b18b2814af87709444579a9e4e72c60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7eb525acbb79010bbf885782ea03002f87abf80d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AvaloniaMeteo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AvaloniaMeteo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

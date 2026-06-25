@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\data\\Proves\\ProvaAvalonia\\AvaloniaMeteo\\AvaloniaMeteo\\",
+  "WorkspaceRootPath": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaMeteo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F8478E4B-96B9-1945-BEC4-E68DBDD6DB0C}|AvaloniaMeteo\\AvaloniaMeteo.csproj|c:\\data\\proves\\provaavalonia\\avaloniameteo\\avaloniameteo\\avaloniameteo\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F8478E4B-96B9-1945-BEC4-E68DBDD6DB0C}|AvaloniaMeteo\\AvaloniaMeteo.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaport\\avaloniameteo\\avaloniameteo\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8478E4B-96B9-1945-BEC4-E68DBDD6DB0C}|AvaloniaMeteo\\AvaloniaMeteo.csproj|solutionrelative:avaloniameteo\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8478E4B-96B9-1945-BEC4-E68DBDD6DB0C}|AvaloniaMeteo\\AvaloniaMeteo.csproj|c:\\data\\proves\\provaavalonia\\avaloniameteo\\avaloniameteo\\avaloniameteo\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{F8478E4B-96B9-1945-BEC4-E68DBDD6DB0C}|AvaloniaMeteo\\AvaloniaMeteo.csproj|c:\\data\\proves\\provawpftoavalonia\\avaloniaport\\avaloniameteo\\avaloniameteo\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F8478E4B-96B9-1945-BEC4-E68DBDD6DB0C}|AvaloniaMeteo\\AvaloniaMeteo.csproj|solutionrelative:avaloniameteo\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -32,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaAvalonia\\AvaloniaMeteo\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml",
+              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml",
               "RelativeDocumentMoniker": "AvaloniaMeteo\\MainWindow.axaml",
-              "ToolTip": "C:\\data\\Proves\\ProvaAvalonia\\AvaloniaMeteo\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml",
+              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml",
               "RelativeToolTip": "AvaloniaMeteo\\MainWindow.axaml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswEkAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwDAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-06-04T13:37:26.988Z",
               "EditorCaption": ""
@@ -45,11 +45,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "C:\\data\\Proves\\ProvaAvalonia\\AvaloniaMeteo\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "AvaloniaMeteo\\MainWindow.axaml.cs",
-              "ToolTip": "C:\\data\\Proves\\ProvaAvalonia\\AvaloniaMeteo\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaMeteo\\AvaloniaMeteo\\MainWindow.axaml.cs",
               "RelativeToolTip": "AvaloniaMeteo\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAMwDAAAAAAAAAAAiwOcDAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-04T12:22:54.077Z",
               "EditorCaption": ""

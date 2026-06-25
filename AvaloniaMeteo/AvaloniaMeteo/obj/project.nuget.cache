@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "V4LUZ8pD93I=",
+  "dgSpecHash": "FR4AtbKBncU=",
   "success": true,
   "projectFilePath": "C:\\data\\Proves\\ProvaWPFToAvalonia\\AvaloniaPort\\AvaloniaMeteo\\AvaloniaMeteo\\AvaloniaMeteo.csproj",
   "expectedPackageFiles": [
@@ -46,9 +46,7 @@
     "C:\\Users\\dev25\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
     "C:\\Users\\dev25\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.9\\system.diagnostics.eventlog.10.0.9.nupkg.sha512",
     "C:\\Users\\dev25\\.nuget\\packages\\system.drawing.common\\10.0.9\\system.drawing.common.10.0.9.nupkg.sha512",
-    "C:\\Users\\dev25\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\dev25\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.9\\system.security.cryptography.protecteddata.10.0.9.nupkg.sha512",
-    "C:\\Users\\dev25\\.nuget\\packages\\system.text.json\\10.0.2\\system.text.json.10.0.2.nupkg.sha512",
     "C:\\Users\\dev25\\.nuget\\packages\\tmds.dbus.protocol\\0.92.0\\tmds.dbus.protocol.0.92.0.nupkg.sha512"
   ],
   "logs": [

@@ -3,102 +3,102 @@
 
 	<Style Selector="Button">
 		<Setter Property="Background" Value="#3498DB"/>
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Padding" Value="12,8"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="Template">
-            <ControlTemplate>
-                <Border Background="{TemplateBinding Background}" 
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Padding" Value="12,8"/>
+		<Setter Property="FontWeight" Value="SemiBold"/>
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border Background="{TemplateBinding Background}"
                         CornerRadius="6"
                         Padding="{TemplateBinding Padding}">
-                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+					<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
                                       Content="{TemplateBinding Content}"/>
-                </Border>
-            </ControlTemplate>
-        </Setter>
-    </Style>
-    <Style Selector="Button:pointerover">
-        <Setter Property="Background" Value="#2980B9"/>
-        <Setter Property="Cursor" Value="Hand"/>
-    </Style>
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+	<Style Selector="Button:pointerover">
+		<Setter Property="Background" Value="#2980B9"/>
+		<Setter Property="Cursor" Value="Hand"/>
+	</Style>
 
-    <Style Selector="TextBox">
-        <Setter Property="Padding" Value="10,8"/>
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Template">
-            <ControlTemplate>
-                <Border Background="White" 
+	<Style Selector="TextBox">
+		<Setter Property="Padding" Value="10,8"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border Background="White"
                         CornerRadius="6"
                         BorderThickness="1"
                         BorderBrush="#E0E0E0">
-                    <TextPresenter Name="PART_TextPresenter" 
+					<TextPresenter Name="PART_TextPresenter"
                                    Margin="{TemplateBinding Padding}"
                                    VerticalAlignment="Center"/>
-                </Border>
-            </ControlTemplate>
-        </Setter>
-    </Style>
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
 
-    <Style Selector="TabItem">
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="Padding" Value="15,8"/>
-        <Setter Property="Margin" Value="0,0,4,0"/>
-        <Setter Property="Template">
-            <ControlTemplate>
-                <Border Name="Border" Background="Transparent" 
-                        BorderThickness="0,0,0,3" 
+	<Style Selector="TabItem">
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="SemiBold"/>
+		<Setter Property="Padding" Value="15,8"/>
+		<Setter Property="Margin" Value="0,0,4,0"/>
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border Name="Border" Background="Transparent"
+                        BorderThickness="0,0,0,3"
                         BorderBrush="Transparent"
                         Margin="{TemplateBinding Margin}"
                         Padding="{TemplateBinding Padding}">
-                    <ContentPresenter Content="{TemplateBinding Header}"/>
-                </Border>
-            </ControlTemplate>
-        </Setter>
-    </Style>
-    <Style Selector="TabItem:selected /template/ Border#Border">
-        <Setter Property="BorderBrush" Value="#3498DB"/>
-    </Style>
-    <Style Selector="TabItem:selected /template/ Border#Border ContentPresenter">
-        <Setter Property="Foreground" Value="#3498DB"/>
-    </Style>
-    <Style Selector="TabItem:pointerover /template/ Border#Border">
-        <Setter Property="Background" Value="#F0F4F8"/>
-    </Style>
+					<ContentPresenter Content="{TemplateBinding Header}"/>
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+	<Style Selector="TabItem:selected /template/ Border#Border">
+		<Setter Property="BorderBrush" Value="#3498DB"/>
+	</Style>
+	<Style Selector="TabItem:selected /template/ Border#Border ContentPresenter">
+		<Setter Property="Foreground" Value="#3498DB"/>
+	</Style>
+	<Style Selector="TabItem:pointerover /template/ Border#Border">
+		<Setter Property="Background" Value="#F0F4F8"/>
+	</Style>
 
-    <Style Selector="ListBox">
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Template">
-            <ControlTemplate>
-                <Border Background="{TemplateBinding Background}" 
+	<Style Selector="ListBox">
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border Background="{TemplateBinding Background}"
                         BorderThickness="1"
                         BorderBrush="#E0E0E0"
                         CornerRadius="8">
-                    <ScrollViewer>
-                        <ItemsPresenter />
-                    </ScrollViewer>
-                </Border>
-            </ControlTemplate>
-        </Setter>
-    </Style>
+					<ScrollViewer>
+						<ItemsPresenter />
+					</ScrollViewer>
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
 
-    <Style Selector="ListBoxItem">
-        <Setter Property="Padding" Value="12,10"/>
-        <Setter Property="Template">
-            <ControlTemplate>
-                <Border x:Name="Bd" BorderThickness="0,0,0,1" BorderBrush="#EEEEEE" 
-                        Background="{TemplateBinding Background}" 
+	<Style Selector="ListBoxItem">
+		<Setter Property="Padding" Value="12,10"/>
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border x:Name="Bd" BorderThickness="0,0,0,1" BorderBrush="#EEEEEE"
+                        Background="{TemplateBinding Background}"
                         Padding="{TemplateBinding Padding}">
-                    <ContentPresenter />
-                </Border>
-            </ControlTemplate>
-        </Setter>
-    </Style>
-    <Style Selector="ListBoxItem:selected /template/ Border#Bd">
-        <Setter Property="Background" Value="#E1F0FA"/>
-    </Style>
-    <Style Selector="ListBoxItem:pointerover /template/ Border#Bd">
-        <Setter Property="Background" Value="#F5F9FC"/>
-    </Style>
+					<ContentPresenter />
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+	<Style Selector="ListBoxItem:selected /template/ Border#Bd">
+		<Setter Property="Background" Value="#E1F0FA"/>
+	</Style>
+	<Style Selector="ListBoxItem:pointerover /template/ Border#Bd">
+		<Setter Property="Background" Value="#F5F9FC"/>
+	</Style>
 
 </Styles>

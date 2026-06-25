@@ -23,7 +23,7 @@ namespace AvaloniaMeteo.MODELS
 
         public string FullLocation => $"{Name},{Region}, {Country}";
         public string DisplayName => $"{Name}, {Region}, {Country}";
-        public string SearchQuery => $"{Lat},{Lon}"; 
+        public string SearchQuery => $"{Lat},{Lon}";
     }
 
     public class Current
